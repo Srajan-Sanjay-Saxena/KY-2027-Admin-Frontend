@@ -1,17 +1,47 @@
 @import "tailwindcss";
 
+@theme {
+  /* Primary brand colors - Gold */
+  --color-primary-50: #fdf8f0;
+  --color-primary-100: #faecd6;
+  --color-primary-200: #f4d5a8;
+  --color-primary-300: #edb970;
+  --color-primary-400: #e59a3f;
+  --color-primary-500: #D4A853;
+  --color-primary-600: #c48a2f;
+  --color-primary-700: #a36c28;
+  --color-primary-800: #855628;
+  --color-primary-900: #6e4724;
+  --color-primary-950: #3d2411;
+
+  /* Dashboard dark theme */
+  --color-dark-50: #f6f6f7;
+  --color-dark-100: #e2e3e5;
+  --color-dark-200: #c5c6cb;
+  --color-dark-300: #a0a2a9;
+  --color-dark-400: #7c7e87;
+  --color-dark-500: #61636c;
+  --color-dark-600: #4d4e56;
+  --color-dark-700: #3f4046;
+  --color-dark-800: #1a1a2e;
+  --color-dark-900: #0f0f1a;
+  --color-dark-950: #08080c;
+
+  /* Accent colors */
+  --color-accent-purple: #8B5CF6;
+  --color-accent-pink: #EC4899;
+  --color-accent-cyan: #06B6D4;
+  --color-accent-green: #10B981;
+  --color-accent-red: #EF4444;
+  --color-accent-orange: #F59E0B;
+
+  /* Fonts */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
 :root {
   --background: #08080c;
   --foreground: #f6f6f7;
-  --card: #0f0f1a;
-  --card-foreground: #f6f6f7;
-  --primary: #D4A853;
-  --primary-foreground: #08080c;
-  --muted: #1a1a2e;
-  --muted-foreground: #a0a2a9;
-  --accent: #8B5CF6;
-  --border: #3f4046;
-  --ring: #D4A853;
 }
 
 * {
@@ -35,21 +65,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--card);
+  background: #0f0f1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: #3f4046;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-foreground);
+  background: #61636c;
 }
 
 /* Focus ring */
 *:focus-visible {
-  outline: 2px solid var(--ring);
+  outline: 2px solid #D4A853;
   outline-offset: 2px;
 }
 
@@ -59,13 +89,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-/* Glass effect */
-.glass {
-  background: rgba(15, 15, 26, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(63, 64, 70, 0.5);
 }
 
 /* Sidebar transition */

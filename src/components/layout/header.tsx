@@ -40,7 +40,7 @@ export function Header({ title, subtitle }: HeaderProps) {
               <input
                 type="text"
                 placeholder="Search..."
-                className="h-9 w-64 rounded-lg border border-dark-600 bg-dark-800 pl-9 pr-4 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="h-9 w-64 rounded-lg border border-dark-600 bg-dark-800 pl-9 pr-4 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               />
             </div>
           </div>

@@ -18,8 +18,8 @@ export function StatsCard({
   value,
   change,
   icon: Icon,
-  iconColor = "text-primary",
-  iconBgColor = "bg-primary/10",
+  iconColor = "text-primary-500",
+  iconBgColor = "bg-primary-500/10",
 }: StatsCardProps) {
   return (
     <div className="rounded-xl border border-dark-700 bg-dark-900 p-6">

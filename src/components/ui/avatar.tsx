@@ -26,7 +26,7 @@ export function Avatar({ src, alt, fallback, size = "md", className }: AvatarPro
   return (
     <div
       className={cn(
-        "relative flex shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary/30 to-accent-purple/30",
+        "relative flex shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary-500/30 to-accent-purple/30",
         sizeClasses[size],
         className
       )}
@@ -39,7 +39,7 @@ export function Avatar({ src, alt, fallback, size = "md", className }: AvatarPro
           className="aspect-square h-full w-full object-cover"
         />
       ) : (
-        <span className="flex h-full w-full items-center justify-center font-medium text-primary">
+        <span className="flex h-full w-full items-center justify-center font-medium text-primary-500">
           {initials}
         </span>
       )}
