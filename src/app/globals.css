@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #08080c;
+  --foreground: #f6f6f7;
+  --card: #0f0f1a;
+  --card-foreground: #f6f6f7;
+  --primary: #D4A853;
+  --primary-foreground: #08080c;
+  --muted: #1a1a2e;
+  --muted-foreground: #a0a2a9;
+  --accent: #8B5CF6;
+  --border: #3f4046;
+  --ring: #D4A853;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #D4A853 0%, #F5DEB3 50%, #D4A853 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(15, 15, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(63, 64, 70, 0.5);
+}
+
+/* Sidebar transition */
+.sidebar-transition {
+  transition: width 0.3s ease, transform 0.3s ease;
 }
